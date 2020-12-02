@@ -17,6 +17,7 @@ Firebase Dynamic Links are deep links that enhance user experience and increase 
   }
   s.social_media_url = 'https://twitter.com/Firebase'
   s.ios.deployment_target = '10.0'
+  s.tvos.deployment_target = '10.0'
 
   s.cocoapods_version = '>= 1.4.0'
   s.prefix_header_file = false
@@ -28,7 +29,6 @@ Firebase Dynamic Links are deep links that enhance user experience and increase 
   ]
   s.public_header_files = 'FirebaseDynamicLinks/Sources/Public/FirebaseDynamicLinks/*.h'
   s.frameworks = 'QuartzCore'
-  s.weak_framework = 'WebKit'
   s.dependency 'FirebaseCore', '~> 7.0'
 
   s.pod_target_xcconfig = {
@@ -37,16 +37,4 @@ Firebase Dynamic Links are deep links that enhance user experience and increase 
     'HEADER_SEARCH_PATHS' => '"${PODS_TARGET_SRCROOT}"'
   }
 
-  s.test_spec 'unit' do |unit_tests|
-    unit_tests.source_files = [
-      'FirebaseDynamicLinks/Tests/Unit/*.[mh]',
-    ]
-    unit_tests.requires_app_host = true
-    unit_tests.resources = 'FirebaseDynamicLinks/Tests/Unit/GoogleService-Info.plist',
-                           # Supply plist for custom domain testing.
-                           'FirebaseDynamicLinks/Tests/Unit/DL-Info.plist'
-    unit_tests.dependency 'OCMock'
-    unit_tests.dependency 'GoogleUtilities/MethodSwizzler', '~> 7.0'
-    unit_tests.dependency 'GoogleUtilities/SwizzlerTestHelpers', '~> 7.0'
-  end
 end
