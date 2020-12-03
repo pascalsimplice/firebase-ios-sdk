@@ -45,8 +45,8 @@ NSString *GINFingerprintJSMethodString() {
   return methodString;
 }
 
-@interface FIRDLJavaScriptExecutor () <WKNavigationDelegate>
-@end
+// @interface FIRDLJavaScriptExecutor () <WKNavigationDelegate>
+// @end
 
 @implementation FIRDLJavaScriptExecutor {
   __weak id<FIRDLJavaScriptExecutorDelegate> _delegate;
@@ -99,7 +99,7 @@ NSString *GINFingerprintJSMethodString() {
 //  _wkWebView = nil;
 }
 
-#pragma mark - WKNavigationDelegate
+// #pragma mark - WKNavigationDelegate
 /*
 - (void)webView:(WKWebView *)webView
     didFinishNavigation:(null_unspecified WKNavigation *)navigation {
