@@ -15,7 +15,7 @@
  */
 
 #import <TargetConditionals.h>
-#if TARGET_OS_IOS
+// #if TARGET_OS_IOS
 
 #import "FirebaseDynamicLinks/Sources/FIRDLDefaultRetrievalProcessV2.h"
 
@@ -242,18 +242,18 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)fetchLocaleFromWebView {
-  if (_jsExecutor) {
-    return;
-  }
-  NSString *jsString = @"window.generateFingerprint=function(){try{var "
-                       @"languageCode=navigator.languages?navigator.languages[0]:navigator."
-                       @"language;return languageCode;}catch(b){return"
-                        "}};";
-  _jsExecutor = [[FIRDLJavaScriptExecutor alloc] initWithDelegate:self script:jsString];
+  // if (_jsExecutor) {
+  //   return;
+  // }
+  // NSString *jsString = @"window.generateFingerprint=function(){try{var "
+  //                      @"languageCode=navigator.languages?navigator.languages[0]:navigator."
+  //                      @"language;return languageCode;}catch(b){return"
+  //                       "}};";
+  // _jsExecutor = [[FIRDLJavaScriptExecutor alloc] initWithDelegate:self script:jsString];
 }
 
 @end
 
 NS_ASSUME_NONNULL_END
 
-#endif  // TARGET_OS_IOS
+// #endif  // TARGET_OS_IOS
