@@ -36,29 +36,30 @@ NS_ASSUME_NONNULL_BEGIN
     @brief Initializes the subviews of this view.
  */
 - (void)initializeSubviews {
-  WKWebView *webView = [self createWebView];
+// WKWebView *webView = [self createWebView];
   UIActivityIndicatorView *spinner = [self createSpinner];
 
   // The order of the following controls z-order.
-  [self addSubview:webView];
+//  [self addSubview:webView];
   [self addSubview:spinner];
 
   [self layoutSubviews];
-  _webView = webView;
+//  _webView = webView;
   _spinner = spinner;
 }
 
 - (void)layoutSubviews {
   CGFloat height = self.bounds.size.height;
   CGFloat width = self.bounds.size.width;
-  _webView.frame = CGRectMake(0, 0, width, height);
-  _spinner.center = _webView.center;
+//  _webView.frame = CGRectMake(0, 0, width, height);
+//  _spinner.center = _webView.center;
 }
 
 /** @fn createWebView
     @brief Creates a web view to be used by this view.
     @return The newly created web view.
  */
+/*
 - (WKWebView *)createWebView {
   WKWebView *webView = [[WKWebView alloc] initWithFrame:CGRectZero];
   // Trickery to make the web view not do weird things (like showing a black background when
@@ -72,7 +73,7 @@ NS_ASSUME_NONNULL_BEGIN
   webView.scrollView.alwaysBounceHorizontal = NO;
   return webView;
 }
-
+*/
 /** @fn createSpinner
     @brief Creates a spinner to be used by this view.
     @return The newly created spinner.

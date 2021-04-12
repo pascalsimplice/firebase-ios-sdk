@@ -18,7 +18,7 @@
 #if TARGET_OS_IOS
 
 #import <UIKit/UIKit.h>
-#import <WebKit/WebKit.h>
+//#import <WebKit/WebKit.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 /** @property webView
  *  @brief The web view.
  */
-@property(nonatomic, weak) WKWebView *webView;
+//@property(nonatomic, weak) WKWebView *webView;
 
 /** @property spinner
  *  @brief The spinner that indicates web view loading.
